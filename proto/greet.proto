@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option go_package = "greet/pb";
+import "google/protobuf/empty.proto";
+
+
+message SayGreetResponse {
+  string message = 1;
+}
+
+service Greet {
+  rpc SayGreet(google.protobuf.Empty) returns (SayGreetResponse) {};
+}
